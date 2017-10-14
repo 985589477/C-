@@ -70,11 +70,18 @@ void algorithm6();
  */
 void algorithm7();
 
+/*
+ 算法8
+ 问题
+ 题目:求s=a+aa+aaa+aaaa+aa...a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。
+ 问题分析:
+ */
+void algorithm8();
 
 
 int main(int argc, const char * argv[]) {
     
-    algorithm7();
+    algorithm8();
     
     return 0;
 }
@@ -283,6 +290,29 @@ void algorithm7(){
     printf("字符长度:%d,空格长度:%d,数字长度:%d,其他长度:%d",charCount,sapceCount,numberCount,ohtersCount);
     
 }
+
+void algorithm8(){
+    //要计算的数字。  要计算的次数
+    int number = 0,count = 0;
+    printf("请输入一个要计算的数:");
+    scanf("%d",&number);
+    printf("请输入要计算的次数:");
+    scanf("%d",&count);
+    //作为循环条件。作为结果
+    int i = 1,  result = 1;
+    //循环要计算的次数
+    while (i <= count) {
+
+        result *= number;
+        i++;
+    }
+    printf("number = %d\n",result);
+}
+
+
+
+
+
 
 
 
